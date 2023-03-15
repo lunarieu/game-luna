@@ -1,0 +1,15 @@
+body{
+	background: black;
+	color:lime;
+	font-family:Courier New;
+}
+
+button{
+  background-color: black; 
+  color: lime;
+  border: 2px solid lime;
+  padding: 15px 32px;
+  display: inline-block;
+  border-radius: 12px;
+  font-size: 14px;
+}
