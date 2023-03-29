@@ -3,12 +3,17 @@ const userOptionShow=document.getElementById("player")
 const resultDisplay=document.getElementById("result")
 const possibleItems=document.querySelectorAll("button")
 let userOption
+let userWin=0
+let totalGames=0
 
 possibleItems.forEach(possibleItem=>possibleItem.addEventListener("click", (e) => {
+	if(totalGames<3&&userWin<2){
 	userOption=e.target.id
 	userOptionShow.innerHTML=userOption
 	generateComputerOption()
 	getResult()
+	totalGames++
+	}
 }))
 
 function generateComputerOption(){
@@ -50,4 +55,5 @@ function getResult(){
 		result="You lose!"
 	}
 	resultDisplay.innerHTML=result
+	
 }
